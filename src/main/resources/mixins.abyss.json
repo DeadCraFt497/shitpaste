@@ -8,7 +8,6 @@
     "mixins.abyss.json"
   ],
   "client": [
-    "MixinSplashProgress",
     "MixinAbstractClientPlayer",
     "MixinCPacketPlayer",
     "MixinEntity",
@@ -22,7 +21,6 @@
     "MixinRenderManager",
     "MixinItemRenderer",
     "MixinRenderEnderCrystal",
-    "MixinMinecraft",
     "MixinFontRenderer",
     "MixinGuiPlayerTabOverlay",
     "MixinModelPlayer",
@@ -33,6 +31,7 @@
     "MixinLayerArmorBase",
     "MixinParticleManager",
     "MixinWorld",
+    "MixinMinecraft",
     "MixinVisGraph",
     "MixinRenderer",
     "MixinRenderEntityItem",
