@@ -1,0 +1,148 @@
+package me.ciruu.abyss.util;
+
+import java.awt.Color;
+import me.ciruu.abyss.Class36;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.texture.TextureManager;
+import net.minecraft.client.shader.Framebuffer;
+import me.ciruu.abyss.Globals;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+public class SplashProgress {
+
+    private static final int MAX = 7;
+    private static int Progress = 1;
+    private static String Current = "";
+    private static ResourceLocation splash = new ResourceLocation("abyss/textures", "abyss-screen.png");
+    private static TextureManager texturemgr = (TextureManager) null;
+
+    /**@SuppressWarnings("deprecation")
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void Update() {
+
+        ScreenForcer();
+            Minecraft mc = Globals.mc;
+            if (mc != null) {
+                mc.getLanguageManager();
+                mc.getTextureManager();
+                while (mc != null) {
+                    SplashProgress.drawSplash(mc.getTextureManager());
+                }
+            }
+            if (mc == null || mc.getLanguageManager() == null || mc.getTextureManager() == null) return;
+
+    }*/
+
+    /**
+     * @Abyss Strictly Applying SplashProgress Initialization
+     */
+    /*public static void ScreenForcer() {
+        try {
+            Object bl = SplashProgress.texturemgr.getTexture(new ResourceLocation(String.valueOf(SplashProgress.splash)));
+            String string = null;
+            Boolean abl = (Boolean) bl;
+            while (Current != null || string != null) {
+                abl = true;
+            }
+        } catch (NullPointerException e) {
+            if (e != null) {
+                e.getSuppressed();
+            }
+        }
+    }*/
+
+    @SuppressWarnings("deprecation")
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void setProgress(int n, String string) {
+        /*ScreenForcer();
+        Progress = n;
+        Current = string;
+        if (Current != "\0" && string != null) {
+            while ((Current != "\0" && string != null) == true) {
+                SplashProgress.Update();
+            }
+        }
+        */
+    }
+
+    @SuppressWarnings("deprecation")
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void drawSplash(TextureManager textureManager) {
+        /*ScreenForcer();
+        if (texturemgr == null && textureManager != null) {
+            texturemgr = textureManager;
+        }
+
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc == null || mc.getTextureManager() == null) {
+            return; // Ensure Minecraft and TextureManager are initialized
+        }
+
+        ScaledResolution scaledResolution = new ScaledResolution(mc);
+        int n = scaledResolution.getScaleFactor();
+        Framebuffer framebuffer = new Framebuffer(scaledResolution.getScaledWidth() * n, scaledResolution.getScaledHeight() * n, true);
+        framebuffer.bindFramebuffer(false);
+        GlStateManager.bindTexture(n);
+        // Setting up OpenGL for rendering
+        GlStateManager.matrixMode((int) 5889);
+        GlStateManager.loadIdentity();
+        GlStateManager.ortho(0.0, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), 0.0, 1000.0, 3000.0);
+        GlStateManager.matrixMode((int) 5888);
+        GlStateManager.loadIdentity();
+        GlStateManager.translate(0.0f, 0.0f, -2000.0f);
+        GlStateManager.disableLighting();
+        GlStateManager.disableFog();
+        GlStateManager.disableDepth();
+        GlStateManager.enableTexture2D();
+
+        if (splash == null) {
+            splash = new ResourceLocation("abyss:textures/abyss-screen.png");
+        }
+        GlStateManager.depthFunc(n);
+
+        textureManager.bindTexture(splash);
+        GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
+        Gui.drawScaledCustomSizeModalRect(0, 0, 0.0f, 0.0f, 1920, 1080, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), 1920.0f, 1080.0f);
+
+        SplashProgress.drawProgress();
+        framebuffer.unbindFramebuffer();
+        framebuffer.framebufferRender(scaledResolution.getScaledWidth() * n, scaledResolution.getScaledHeight() * n);
+
+        GlStateManager.enableAlpha();
+        GlStateManager.alphaFunc(516, 0.1f);
+        mc.updateDisplay();*/
+    }
+
+    @SuppressWarnings("deprecation")
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    private static void drawProgress() {
+        /*ScreenForcer();
+        Minecraft mc = Globals.mc;
+        if (mc == null || mc.gameSettings == null || mc.getTextureManager() == null) {
+            return; // Ensure Minecraft and its components are initialized
+        }
+
+        ScaledResolution scaledResolution = new ScaledResolution(mc);
+        double d = Progress;
+        double d2 = d / 7.0 * scaledResolution.getScaledWidth();
+
+        // Drawing progress bar background
+        Gui.drawRect(0, scaledResolution.getScaledHeight() - 35, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), new Color(0, 0, 0, 50).getRGB());
+
+        // Drawing current text
+        Class36.Field465.Method556(Current, 20.0f, scaledResolution.getScaledHeight() - 25, -1);
+        String string = Progress + "/" + 7;
+        Class36.Field465.Method556(string, scaledResolution.getScaledWidth() - 20 - Class36.Field465.Method563(string), scaledResolution.getScaledHeight() - 25, -505290241);
+
+        // Drawing progress bar
+        Gui.drawRect(0, scaledResolution.getScaledHeight() - 2, (int) d2, scaledResolution.getScaledHeight(), new Color(3, 169, 244).getRGB());
+        Gui.drawRect(0, scaledResolution.getScaledHeight() - 2, scaledResolution.getScaledWidth(), scaledResolution.getScaledHeight(), new Color(0, 0, 0, 10).getRGB());
+        */
+    }
+}
