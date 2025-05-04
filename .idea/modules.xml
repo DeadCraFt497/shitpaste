@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Abyss-1.6.0.iml" filepath="$PROJECT_DIR$/.idea/Abyss-1.6.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.api.iml" filepath="$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Abyss-1.6.0.test.iml" />
+    </modules>
+  </component>
+</project>
