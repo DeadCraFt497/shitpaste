@@ -33,7 +33,6 @@
     "MixinLayerArmorBase",
     "MixinParticleManager",
     "MixinWorld",
-    "MixinMinecraft",
     "MixinVisGraph",
     "MixinRenderer",
     "MixinRenderEntityItem",
