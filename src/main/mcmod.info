@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "abyss",
+    "name": "Abyss",
+    "description": "Cracked Abyss CPVP Client.",
+    "version": "1.2.1",
+    "mcversion": "1.12.2",
+    "logoFile": "abyss.png",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "Ciruu"
+    ],
+    "screenshots": [],
+    "dependencies": []
+  }
+]
