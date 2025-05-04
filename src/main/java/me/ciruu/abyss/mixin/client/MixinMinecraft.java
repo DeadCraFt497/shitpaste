@@ -2,6 +2,7 @@ package me.ciruu.abyss.mixin.client;
 
 import me.ciruu.abyss.AbyssMod;
 import me.ciruu.abyss.Class499;
+import me.ciruu.abyss.Globals;
 import me.ciruu.abyss.Manager;
 import me.ciruu.abyss.enums.Class500;
 import me.ciruu.abyss.events.minecraft.EventMinecraftCrashReport;
@@ -31,16 +32,6 @@ import java.io.IOException;
 
 @Mixin(value={Minecraft.class}, priority=2000)
 public class MixinMinecraft {
-    @Shadow
-    public GuiScreen currentScreen;
-    @Shadow
-    public GameSettings gameSettings;
-    @Shadow
-    public Framebuffer framebuffer;
-    @Shadow
-    public TextureManager renderEngine;
-    @Shadow
-    public int rightClickDelayTimer;
 
     @Inject(method = {"displayCrashReport(Lnet/minecraft/crash/CrashReport;)V"}, at = {@At(value = "HEAD")})
     public void displayCrashReport(CrashReport crashReport, CallbackInfo callbackInfo) {
@@ -55,10 +46,10 @@ public class MixinMinecraft {
         try {
             if (Manager.moduleManager != null && Manager.moduleManager.isModuleEnabled(ScreenShaders.class)) {
                 ScreenShaders screenShaders = (ScreenShaders) Manager.moduleManager.getModuleByClass(ScreenShaders.class);
-                if (Minecraft.getMinecraft().world == null && this.currentScreen != null) {
+                if (Minecraft.getMinecraft().world == null && Globals.mc.currentScreen != null) {
                     callbackInfoReturnable.setReturnValue(screenShaders.fps.getValue());
                 } else {
-                    callbackInfoReturnable.setReturnValue(this.gameSettings.limitFramerate);
+                    callbackInfoReturnable.setReturnValue(Globals.mc.gameSettings.limitFramerate);
                 }
             }
         } catch (NullPointerException e) {
@@ -164,7 +155,7 @@ public class MixinMinecraft {
         try {
             Class499.Method2190(Class500.RIGHT);
             if (Manager.moduleManager.isModuleEnabled(FastPlace.class) && !((Boolean) ((FastPlace) Manager.moduleManager.getModuleByClass(FastPlace.class)).onlyxp.getValue()).booleanValue()) {
-                this.rightClickDelayTimer = ((FastPlace) Manager.moduleManager.getModuleByClass(FastPlace.class)).placedelay.getValue();
+                Globals.mc.rightClickDelayTimer = ((FastPlace) Manager.moduleManager.getModuleByClass(FastPlace.class)).placedelay.getValue();
             }
         } catch (NullPointerException e) {
             System.err.println("Error in rightClickMouse: " + e.getMessage());
