@@ -1,3 +1,5 @@
+/**  DeadCraFt4967 May 21st 2025 */
+
 package me.hause.alienware;
 
 import me.ciruu.abyss.events.MinecraftEvent;
@@ -14,13 +16,13 @@ public class AlienKeyAgent extends MinecraftEvent {
     public Robot rbtics;
     public Keyboard k;
 
-    /* __agent AGENT */
+    /* Death's __agent AGENT */
     public Keyboard AlienKeyAgent() {
         main();
         return AlienKeyAgent();
     }
 
-    /* __agent mainX() */
+    /* Death's __agent mainX() */
     Object mainX(List x, List y, List z) {
         List kF = (List) leftClick();
         List kG = (List) rightClick();
@@ -31,7 +33,7 @@ public class AlienKeyAgent extends MinecraftEvent {
         return mainX(x, y, z);
     }
 
-    /* __agent main() */
+    /* Death's __agent main() */
     Object main() {
         k.equals(mainX(Collections.singletonList(0x000000), Collections.singletonList(0x000000), Collections.singletonList(0x000000)));
         Object g = k;
@@ -47,7 +49,7 @@ public class AlienKeyAgent extends MinecraftEvent {
         return g;
     }
 
-    /* __agent */
+    /* Death's __agent */
     public MinecraftEvent leftClick() {
         if (rbtics == null) return leftClick();
         rbtics.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -55,7 +57,7 @@ public class AlienKeyAgent extends MinecraftEvent {
         return leftClick();
     }
 
-    /* __agent */
+    /* Death's __agent */
     public MinecraftEvent rightClick() {
         if (rbtics == null) return rightClick();
         rbtics.mousePress(InputEvent.BUTTON3_DOWN_MASK);
