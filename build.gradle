@@ -45,7 +45,7 @@ minecraft {
     runDir = 'run'
     mappings = project.mcpVersion
     coreMod = 'me.ciruu.abyss.AbyssMod'
-    makeObfSourceJar = false
+    makeObfSourceJar = true
 
     replaceIn 'reference/Reference.java'
     replace '${version}', project.version
