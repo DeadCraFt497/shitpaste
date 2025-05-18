@@ -14,6 +14,7 @@ import java.util.Arrays;
 
 @Mod(modid="abyss", name="Abyss", version="1.6.0")
 public class AbyssMod {
+    
     @Mod.Instance(value="abyss")
     public static AbyssMod INSTANCE;
     public static Manager manager;
