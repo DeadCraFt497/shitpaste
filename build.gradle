@@ -44,7 +44,7 @@ minecraft {
     version = project.forgeVersion
     runDir = 'run'
     mappings = project.mcpVersion
-    coreMod = 'me.ciruu.abyss.mixin.MixinLoaderForge'
+    coreMod = 'me.ciruu.abyss.AbyssMod'
     makeObfSourceJar = false
 
     replaceIn 'reference/Reference.java'
