@@ -1,3 +1,5 @@
+/** @Info DeadCraFt497 May 21st */
+
 package me.ciruu.abyss;
 
 import net.minecraft.client.Minecraft;
@@ -11,26 +13,14 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class SplashProgressMain extends SplashProgress {
-
-    private static Method method;
-
+    
+    public static Method method = new Method();
     private static void start(CallbackInfo callbackInfo) {
-        /*
-        try {
-            method = SplashProgress.class.getDeclaredMethod("disableSplash", new Class[0]);
-        } catch (NoSuchMethodException e) {
-            throw new RuntimeException(e);
-        }
-
-        method.setAccessible(true);
-
-        try {
-            method.invoke(null, new Object[0]);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
         callbackInfo.cancel();
-    */}
+        
+    }
+    static {
+        CallbackInfo call = null;
+        start(call.cancel());
+    }
 }
