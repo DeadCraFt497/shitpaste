@@ -2,14 +2,13 @@
   {
     "modid": "abyss",
     "name": "Abyss",
-    "description": "Cracked Abyss CPVP Client.",
-    "version": "1.2.1",
+    "description": "A Minecraft PVP Client.",
+    "version": "1.6.0",
     "mcversion": "1.12.2",
-    "logoFile": "abyss.png",
-    "url": "",
+    "logoFile": "textures/abyss/abyss.png",
+    "url": "https::/www.abyssclient.com",
     "updateUrl": "",
     "authorList": [
-      "Ciruu"
     ],
     "screenshots": [],
     "dependencies": []
