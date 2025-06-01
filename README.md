@@ -22,3 +22,5 @@ Feel free to paste from this, not like anybody cares anyway
 + [maywr](https://github.com/maywr) - deobfuscating the client
 + [mrnv](https://github.com/mr-nv) - remapping the deobf for it to be readable
 + [The Faceless Lord](https://github.com/deadLORD135) - remapping the deobf for it to be readable
++ [Crystallinqq](https://github.com/Crystallinqq) - the crack
++ [cattingmd](https://github.com/cattyngmd) - a smart person
